@@ -1,8 +1,16 @@
-# DeployGuard
+# Distributed Systems Mini Project – Assignment 6
+
+**Course:** Distributed Systems (BCE27PC01)
+
+| Name | PRN |
+|---|---|
+| Venkatesh Patil | 124B2B006 |
+| Atharva Kshirsagar | 124B2B008 |
+
+## DeployGuard
 
 DeployGuard is a distributed control plane for releasing feature flags safely. It rolls a configuration change out in stages (for example 5%, 25%, 50%, 100%), watches error rate and p95 latency for the users who receive the change, and automatically rolls back or pauses when a guardrail is breached.
 
-Distributed Systems (BCE27PC01), Assignment 6 / Mini Project.
 
 ## How it works
 
