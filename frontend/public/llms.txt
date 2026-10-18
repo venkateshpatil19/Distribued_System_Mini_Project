@@ -1,0 +1,23 @@
+# DeployGuard
+
+> DeployGuard is a distributed control plane for releasing feature flags and configuration changes safely across many application instances. It stages rollouts (for example 5%, 25%, 50%, 100%), watches health guardrails (error rate and p95 latency) for the users who receive the new variant, and automatically pauses or rolls back when a guardrail is breached.
+
+This is a university mini project (Distributed Systems, BCE27PC01, Assignment 6). It runs as independent processes: several controllers (Java, gRPC + HTTP), several agents, PostgreSQL and RabbitMQ, deployed with Docker Compose or Kubernetes.
+
+## Public pages
+- [Overview](/): what the system does and its architecture
+- [Documentation](/docs): architecture, algorithms, setup, troubleshooting, syllabus and lab mapping
+
+## Distributed-systems mechanisms implemented
+- Bully leader election between controller processes, with epochs
+- Lamport and vector clocks on every message and event
+- Expiring leases with monotonically increasing fencing tokens for mutual exclusion
+- Wait-for-graph deadlock detection with youngest-victim resolution
+- Chandy-Lamport snapshot over the broker channels (teaching demonstration)
+- Cristian's clock synchronization between agents and controllers
+- Heartbeat (beacon) failure detection with suspicion, not proof, of failure
+- Retries with backoff, idempotent event handling, durable queues, reconnection and pull-based catch-up
+
+## Notes for automated agents
+- Operational pages (/dashboard, /flags, /rollouts, /agents, /topology, /experiments) and /api/* show live, unauthenticated control-plane state and are not meant for indexing.
+- Traffic and faults shown in the dashboard are simulated and labelled as such.

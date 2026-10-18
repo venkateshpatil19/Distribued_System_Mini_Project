@@ -1,0 +1,7 @@
+<settings>
+  <localRepository>/usr/share/maven-repo</localRepository>
+  <offline>true</offline>
+  <!-- Ubuntu's offline repository only packages surefire 2.22.3, which is not on Maven Central. -->
+  <profiles><profile><id>ubuntu</id><properties><surefire.version>2.22.3</surefire.version></properties></profile></profiles>
+  <activeProfiles><activeProfile>ubuntu</activeProfile></activeProfiles>
+</settings>

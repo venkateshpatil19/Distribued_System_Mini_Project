@@ -1,0 +1,5 @@
+DeployGuard release notes. Rollout of new checkout started at five percent.
+Guardrail breached: error rate above five percent. Automatic rollback completed.
+Leader election finished. Controller three is the leader again.
+Rollout of search ranker started. Guardrail healthy. Rollout promoted to fifty percent.
+Rollout promoted to one hundred percent. Rollout completed.

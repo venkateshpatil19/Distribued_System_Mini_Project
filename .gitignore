@@ -1,0 +1,32 @@
+# AI assistant files
+CLAUDE.md
+.claude/
+
+# Build output (rebuilt by build.bat or the Docker build)
+backend/target/
+frontend/node_modules/
+frontend/.next/
+frontend/lib/build-info.json
+frontend/test-results/
+frontend/playwright-report/
+*.tsbuildinfo
+
+# Run-time state and logs
+data/
+logs/
+*.log
+
+# Local settings and secrets (.env.example is the template to share)
+.env
+.env.*
+!.env.example
+
+# Temporary and editor files
+_to_delete/
+*.tgz
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
